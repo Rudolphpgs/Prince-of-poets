@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Frutiger Neue LT W1G";
+  src: url("../fonts/FrutigerNeueLTW1G/FrutigerNeueLTW1G-Heavy.woff")
+    format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Frutiger Neue LT W1G Book";
+  src: url("../fonts/FrutigerNeueLTW1G/FrutigerNeueLTW1G-Bold.woff")
+    format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Frutiger Neue LT W1G";
+  src: url("../fonts/FrutigerNeueLTW1G/FrutigerNeueLTW1G-Medium.woff")
+    format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Frutiger Neue LT W1G Book";
+  src: url("../fonts/FrutigerNeueLTW1G/FrutigerNeueLTW1G-Book.woff2")
+      format("woff2"),
+    url("../fonts/FrutigerNeueLTW1G/FrutigerNeueLTW1G-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Frutiger Neue LT W1G";
+  src: url("../fonts/FrutigerNeueLTW1G/FrutigerNeueLTW1G-Regular.woff")
+    format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Al Mankous</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preload" href="assets/images/logo.svg" as="image">
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/styles/main.css?6464645">
+    <style>
+        .loader {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999;
+            background: #141414;
+            margin: auto;
+            -webkit-transition: all .2s .1s ease-in-out;
+            -o-transition: all .2s .1s ease-in-out;
+            transition: all .2s .1s ease-in-out;
+            /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
+        }
+    
+        .loader .in_loader {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 100%;
+            -webkit-transition: all .8s ease-in-out;
+            -o-transition: all .8s ease-in-out;
+            transition: all .8s ease-in-out
+        }
+    
+        .is-loaded .loader {
+            /*  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);*/
+            opacity: 0;
+    
+        }
+    
+        .loader .loader-img {
+            margin: 0;
+            text-align: center;
+            position: relative;
+            /*-webkit-animation: logoclipZoom 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
+            animation: logoclipZoom 2s linear infinite alternate;*/
+        }
+    
+        .loader .loader-img svg,
+        .loader .loader-img img {
+            animation: logoclipZoom 2s linear infinite alternate;
+        }
+    
+    
+        @-webkit-keyframes logoclipZoom {
+            from {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+    
+            to {
+                -webkit-transform: scale(.8);
+                transform: scale(.8);
+            }
+        }
+    
+        @keyframes logoclipZoom {
+            from {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+    
+            to {
+                -webkit-transform: scale(.8);
+                transform: scale(.8);
+            }
+        }
+    
+        .loader .loader-img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            -webkit-transition: all 1.2s ease-in-out;
+            -o-transition: all 1.2s ease-in-out;
+            transition: all 1.2s ease-in-out
+        }
+    
+    
+    
+        .loader .loader-img svg,
+        .loader .loader-img img {
+            width: 100%;
+            height: auto;
+        }
+    
+        .loadScale .loader .loader-img {
+            transform: scale(2);
+            opacity: 0;
+            filter: blur(10px);
+        }
+    
+    
+    
+        @media only screen and (max-width: 767px) {
+    
+            .loader .loader-img svg,
+            .loader .loader-img img {
+                max-width: 70vw;
+            }
+        }
+    
+        .is-loaded .loader .loader-img svg,
+        .is-loaded .loader .loader-img img {
+            animation-play-state: paused;
+        }
+    
+    
+        .is-loaded .loader {
+            pointer-events: none
+        }
+    </style>
+</head>
+
+<body class="home__page __index">
+
+
+<main class="home">
+  <section class="homeBanner">
+    <div class="bgWrap abs">
+      <picture>
+        <source srcset="assets/images/banner.webp" type="image/webp" />
+        <source srcset="assets/images/banner.jpg" type="image/jpeg" />
+        <img src="assets/images/banner.jpg" loading="lazy" />
+      </picture>
+    </div>
+
+    <div class="container">
+      <div class="bannerWrap">
+        <div class="leftWrap">
+          <h1><span>Prince of Poets</span></h1>
+
+          <div class="desc_left">
+            <span>When the arab world speaks poetry again</span>
+          </div>
+
+          <div class="button_">
+            <a href="#" class=""><span>Register</span></a>
+          </div>
+        </div>
+
+        <div class="rightWrap">
+          <div class="banItem">
+            <div class="inner_">
+              <div class="number">01</div>
+              <div class="desc_right">
+                <p>Abu Dhabi Reveals the List of 42 Contestants for the 'Prince
+                  of Poets' Competition</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="banItem">
+            <div class="inner_">
+              <div class="number">02</div>
+              <div class="desc_">
+                <p>Registration Opens for the 7th Season of the ‘Prince of
+                  Poets’ Competition</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="participants section">
+    <div class="container">
+      <div class="leftWrap_">
+        <h2>Participants</h2>
+
+        <div class="listWrap">
+          <div class="inner_">
+            <a href="#" class="active">Eligible for Voting</a>
+            <a href="#">Qualified </a>
+            <a href="#">All Participants</a>
+          </div>
+        </div>
+      </div>
+      <div class="rightWrap_">
+        <div class="availableInfo">
+          <div class="itemGrid">
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/partOne.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 001</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagOne.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/partTwo.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 002</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagTwo.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/partThree.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 003</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagThree.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/parttwo.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 004</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagTwo.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/partOne.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 005</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagOne.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/partSix.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 006</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagSix.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/partOne.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 007</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagOne.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/partEight.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 008</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagOne.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/partOne.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 009</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagOne.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/partTwo.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 010</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagTwo.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/partThree.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 011</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagThree.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+            <div class="pitemWrapper">
+              <div class="pitem">
+                <div class="ImageBox abs">
+                  <picture>
+                    <img src="assets/images/parttwo.jpg" type="image/jpeg" alt="" />
+                  </picture>
+                </div>
+
+                <div class="pRankBox">
+                  <div class="pRank">
+                    <span>No. 012</span>
+                  </div>
+                  <div class="flatBox abs">
+                    <picture>
+                      <img src="assets/images/flagTwo.svg" type="image/jpeg" alt="" />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <p>Participant Name here...</p>
+            </div>
+          </div>
+
+          <div class="button_ button_two">
+            <a href="#" class=""><span>View All</span></a>
+          </div>
+        </div>
+
+        <div class="unavailableInfo hide">
+          <div class="infowrap">
+            <h3><span>Information currently unavailable</span></h3>
+            <p><span>Kindly check in after a while </span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="episodes section sectionBlue">
+    <div class="logoWrap">
+      <picture>
+        <img src="assets/images/logoTwoUpdated.svg" loading="lazy">
+      </picture>
+    </div>
+    <div class="container">
+      <div class="leftWrap_">
+        <h2 class="bColorWhite">Episodes</h2>
+        <div class="filterWrap">
+          <select data-select>
+            <option value="0" disabled selected>Current Episodes</option>
+            <option value="2">Episode 1</option>
+            <option value="3">Episode 2</option>
+            <option value="4">Episode 3</option>
+          </select>
+          <div class="caretWrap">
+            <div class="inner_">
+              <div class="caretBox">
+                <img src="assets/images/caret.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightWrap_">
+        <div class="swiper swiperEpisodes">
+          <div class="swiper-wrapper ">
+
+            <div class="swiper-slide">
+              <div class="eItemWrapper">
+                <div class="eItemLink">
+                  <a href="#">
+                    <div class="eitem">
+
+                      <div class="ImageBox abs">
+                        <picture>
+                          <img src="assets/images/eImageOne.jpg" type="image/jpeg" alt="" />
+                        </picture>
+                      </div>
+
+                      <div class="playBtnWrap">
+                        <div class="inner_">
+                          <div class="playBtn">
+                            <div class="playIcon">
+                              <img src="assets/images/playIcon.svg" type="image/svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="timeStapWrap">
+                        <div class="inner_">
+                          <span>45 MINS</span>
+                        </div>
+                      </div>
+
+                    </div>
+                  </a>
+                  <p>Lorem ipsum dolor sit amet, consectetur accumsan Suspendisse accumsan ex magna.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="eItemWrapper">
+                <div class="eItemLink">
+                  <a href="#">
+                    <div class="eitem">
+
+                      <div class="ImageBox abs">
+                        <picture>
+                          <img src="assets/images/eImageTwo.jpg" type="image/jpeg" alt="" />
+                        </picture>
+                      </div>
+
+                      <div class="playBtnWrap">
+                        <div class="inner_">
+                          <div class="playBtn">
+                            <div class="playIcon">
+                              <img src="assets/images/playIcon.svg" type="image/svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="timeStapWrap">
+                        <div class="inner_">
+                          <span>30 MINS</span>
+                        </div>
+                      </div>
+
+                    </div>
+                  </a>
+                  <p>Lorem ipsum dolor sit amet, consectetur accumsan Suspendisse accumsan ex magna.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="eItemWrapper">
+                <div class="eItemLink">
+                  <a href="#">
+                    <div class="eitem">
+
+                      <div class="ImageBox abs">
+                        <picture>
+                          <img src="assets/images/eImageOne.jpg" type="image/jpeg" alt="" />
+                        </picture>
+                      </div>
+
+                      <div class="playBtnWrap">
+                        <div class="inner_">
+                          <div class="playBtn">
+                            <div class="playIcon">
+                              <img src="assets/images/playIcon.svg" type="image/svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="timeStapWrap">
+                        <div class="inner_">
+                          <span>45 MINS</span>
+                        </div>
+                      </div>
+
+                    </div>
+                  </a>
+                  <p>Lorem ipsum dolor sit amet, consectetur accumsan Suspendisse accumsan ex magna.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="eItemWrapper">
+                <div class="eItemLink">
+                  <a href="#">
+                    <div class="eitem">
+
+                      <div class="ImageBox abs">
+                        <picture>
+                          <img src="assets/images/eImageTwo.jpg" type="image/jpeg" alt="" />
+                        </picture>
+                      </div>
+
+                      <div class="playBtnWrap">
+                        <div class="inner_">
+                          <div class="playBtn">
+                            <div class="playIcon">
+                              <img src="assets/images/playIcon.svg" type="image/svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="timeStapWrap">
+                        <div class="inner_">
+                          <span>30 MINS</span>
+                        </div>
+                      </div>
+
+                    </div>
+                  </a>
+                  <p>Lorem ipsum dolor sit amet, consectetur accumsan Suspendisse accumsan ex magna.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="eItemWrapper">
+                <div class="eItemLink">
+                  <a href="#">
+                    <div class="eitem">
+
+                      <div class="ImageBox abs">
+                        <picture>
+                          <img src="assets/images/eImageOne.jpg" type="image/jpeg" alt="" />
+                        </picture>
+                      </div>
+
+                      <div class="playBtnWrap">
+                        <div class="inner_">
+                          <div class="playBtn">
+                            <div class="playIcon">
+                              <img src="assets/images/playIcon.svg" type="image/svg" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="timeStapWrap">
+                        <div class="inner_">
+                          <span>45 MINS</span>
+                        </div>
+                      </div>
+
+                    </div>
+                  </a>
+                  <p>Lorem ipsum dolor sit amet, consectetur accumsan Suspendisse accumsan ex magna.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, vitae. Distinctio dicta saepe culpa in
+          delectus similique officia qui! Facilis ipsum architecto magni nostrum, quaerat aspernatur obcaecati quibusdam
+          sit deleniti?</p>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, vitae. Distinctio dicta saepe culpa in
+          delectus similique officia qui! Facilis ipsum architecto magni nostrum, quaerat aspernatur obcaecati quibusdam
+          sit deleniti?</p>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, vitae. Distinctio dicta saepe culpa in
+          delectus similique officia qui! Facilis ipsum architecto magni nostrum, quaerat aspernatur obcaecati quibusdam
+          sit deleniti?</p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="media section">
+    <div class="container">
+      <div class="leftWrap_">
+        <h2 class="">Media Center</h2>
+        <div class="filterWrap">
+          <select data-select>
+            <option value="0" disabled selected>Images</option>
+            <option value="2">Lorem1</option>
+            <option value="3">Lorem2</option>
+            <option value="4">Lorem3</option>
+          </select>
+          <div class="caretWrap">
+            <div class="inner_">
+              <div class="caretBox">
+                <img src="assets/images/caretBlack.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="social section">
+    <div class="container">
+      <div class="leftWrap_">
+        <h2 class="">Social Feeds</h2>
+        <div class="filterWrap">
+          <select data-select>
+            <option value="0" disabled selected>Instagram</option>
+            <option value="2">Facebook</option>
+            <option value="3">Twitter</option>
+            <option value="4">LinkedIn</option>
+          </select>
+          <div class="caretWrap">
+            <div class="inner_">
+              <div class="caretBox">
+                <img src="assets/images/caretBlack.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightWrap_">
+        <div class="swiper swiperSocials">
+          <div class="swiper-wrapper ">
+
+            <div class="swiper-slide">
+              <div class="eItemWrapper">
+                <div class="eItemLink">
+                  <a href="#">
+                    <div class="eitem">
+                      <div class="ImageBox abs">
+                        <picture>
+                          <img src="assets/images/eImageOne.jpg" type="image/jpeg" alt="" />
+                        </picture>
+                      </div>
+                    </div>
+                  </a>
+                  <p> من الشعراء المتأهلين للمنافسة على لقب </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="eItemWrapper">
+                <div class="eItemLink">
+                  <a href="#">
+                    <div class="eitem">
+
+                      <div class="ImageBox abs">
+                        <picture>
+                          <img src="assets/images/eImageOne.jpg" type="image/jpeg" alt="" />
+                        </picture>
+                      </div>
+                    </div>
+                  </a>
+                  <p> من الشعراء المتأهلين للمنافسة على لقب </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="eItemWrapper">
+                <div class="eItemLink">
+                  <a href="#">
+                    <div class="eitem">
+
+                      <div class="ImageBox abs">
+                        <picture>
+                          <img src="assets/images/eImageOne.jpg" type="image/jpeg" alt="" />
+                        </picture>
+                      </div>
+                    </div>
+                  </a>
+                  <p> من الشعراء المتأهلين للمنافسة على لقب </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="assets/scripts/lib/modernizr.min.js"></script>
+<script src="assets/scripts/lib/jquery-3.4.1.min.js"></script>
+<script src="assets/scripts/min/home_plugins.js?576675"></script>
+<script src="assets/scripts/min/home.js?35343"></script>
+
+<script>
+  $(function () {
+    $('[data-select]').selectric({
+      disableOnMobile: false,
+      nativeOnMobile: false
+    });
+
+  });
+
+  const swiper = new Swiper('.swiperEpisodes.swiper', {
+    slidesPerView: 2,
+    autoPlay: false,
+    spaceBetween: 30,
+  });
+
+  const swipertwo = new Swiper('.swiperSocials.swiper', {
+    slidesPerView: 3,
+    autoPlay: false,
+    spaceBetween: 30,
+  });
+</script>    <div class="progress-wrap">
+        <div class="icon_">
+            <svg x="0px" y="0px" viewBox="0 0 21.8 28" overflow="visible" xml:space="preserve">
+                <line fill="none" stroke="#1c1c1c" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                    x1="10.9" y1="24.8" x2="10.9" y2="3.7" />
+                <polyline fill="none" stroke="#1c1c1c" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-miterlimit="10" points="2.7,11.6 
+	10.9,3.3 19.2,11.6 " />
+            </svg>
+        </div>
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+</body>
+
+</html>

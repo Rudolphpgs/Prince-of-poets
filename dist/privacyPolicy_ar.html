@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="rtl" dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>مسابقة المنكوس</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="preload" href="assets/images/logo.svg" as="image">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/styles/page.css?23424">
+    <link rel="stylesheet" href="assets/styles/page-rtl.css?2324">
+    <style>
+        .loader {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999;
+            background: #141414;
+            margin: auto;
+            -webkit-transition: all .2s .1s ease-in-out;
+            -o-transition: all .2s .1s ease-in-out;
+            transition: all .2s .1s ease-in-out;
+            /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);*/
+        }
+    
+        .loader .in_loader {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height: 100%;
+            -webkit-transition: all .8s ease-in-out;
+            -o-transition: all .8s ease-in-out;
+            transition: all .8s ease-in-out
+        }
+    
+        .is-loaded .loader {
+            /*  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);*/
+            opacity: 0;
+    
+        }
+    
+        .loader .loader-img {
+            margin: 0;
+            text-align: center;
+            position: relative;
+            /*-webkit-animation: logoclipZoom 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
+            animation: logoclipZoom 2s linear infinite alternate;*/
+        }
+    
+        .loader .loader-img svg,
+        .loader .loader-img img {
+            animation: logoclipZoom 2s linear infinite alternate;
+        }
+    
+    
+        @-webkit-keyframes logoclipZoom {
+            from {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+    
+            to {
+                -webkit-transform: scale(.8);
+                transform: scale(.8);
+            }
+        }
+    
+        @keyframes logoclipZoom {
+            from {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+            }
+    
+            to {
+                -webkit-transform: scale(.8);
+                transform: scale(.8);
+            }
+        }
+    
+        .loader .loader-img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            -webkit-transition: all 1.2s ease-in-out;
+            -o-transition: all 1.2s ease-in-out;
+            transition: all 1.2s ease-in-out
+        }
+    
+    
+    
+        .loader .loader-img svg,
+        .loader .loader-img img {
+            width: 100%;
+            height: auto;
+        }
+    
+        .loadScale .loader .loader-img {
+            transform: scale(2);
+            opacity: 0;
+            filter: blur(10px);
+        }
+    
+    
+    
+        @media only screen and (max-width: 767px) {
+    
+            .loader .loader-img svg,
+            .loader .loader-img img {
+                max-width: 70vw;
+            }
+        }
+    
+        .is-loaded .loader .loader-img svg,
+        .is-loaded .loader .loader-img img {
+            animation-play-state: paused;
+        }
+    
+    
+        .is-loaded .loader {
+            pointer-events: none
+        }
+    </style>
+
+
+</head>
+
+<body class="inner__page __privacyPolicy_ar">
+    
+    <header id="header">
+      <div class="navbar">
+        <div class="logoBox">
+          <a
+            href="index_ar.html"
+            class="navbar-brand"
+            title="logo"
+            aria-label="logo"
+          ><img src="assets/images/logo.svg" class="fullLogo" alt="" /></a>
+        </div>
+      </div>
+    </header><div class="loader">
+	<div class="in_loader">
+		<div class="loader-block">
+			<div class="loader-img">
+				<img src="assets/images/logo.svg" alt="">
+			</div>
+		</div>
+	</div>
+</div><main>
+  <section class="pageBanner">
+    <div class="bgBox abs">
+      <picture>
+        <source srcset="assets/images/aboutBanner.webp" type="image/webp">
+        <source srcset="assets/images/aboutBanner.jpg" type="image/jpeg">
+        <img src="assets/images/aboutBanner.jpg" loading="lazy" alt="" width="1900" height="688">
+      </picture>
+    </div>
+    <div class="container">
+      <div class="titleWrap">
+        <h1>
+          <span>سياسة الخصوصية</span>
+        </h1>
+      </div>
+      <div class="bottomBox">
+        <div class="breadcrumb_wrap">
+          <ul>
+            <li>
+              <a href="index_ar.html"><span>مسكن</span></a>
+            </li>
+
+            <li class="current"><span>سياسة الخصوصية</span>
+            </li>
+          </ul>
+        </div>
+        <div class="backBox">
+          <a href="index_ar.html" class="link_">
+            <span>خلف</span>
+            <div class="icon">
+              <img src="assets/images/backBtn.svg" loading="lazy" alt="" width="20" height="20" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pageSection  ">
+    <div class="container ">
+
+      <div class="textBox big_lineHeight">
+        <h3>سياسة الخصوصية / برنامج المنكوس</h3>
+        <p> مساء غد الأحد 21 مارس المرحلة الرابعة (نصف النهائي) من تصفيات اللقب ضد فارس
+          المنكوس في برنامج "المنكوس" في موسمه الثاني إنتاج الثقافة والتراث
+          تنطلق لجنة إدارة البرامج والمهرجانات في أبوظبي من مسرح شاطئ الراحة في أبوظبي
+          ابوظبي الساعة العاشرة بتوقيت الامارات وعبر قناتي "بينونة" و "الامارات". </p>
+        <p> خلال الحلقة ، سيتنافس 6 نجوم من الباقين على هذه المرحلة ، حيث سيقدمون
+          روائعهم أمام أعضاء لجنة التحكيم ، وسيتم تقييم أدائهم من قبل
+          لجنة من 30 درجة لهذه الحلقة ثم ينتقلون الى تصويت المشاهدين الذي يستمر
+          حتى نهاية الحلقة الاخيرة ويتم تخصيص 40 درجة بينما سيكون اخر تقييم خلال
+          الحلقة الاخيرة 30 درجة.
+        </p>
+        <p> شهدت الحلقة الاخيرة تأهل (عبدالله فهد الصخبرة من السعودية هادي بن
+          رابعة من الكويت) وبقية المتسابقين هم (سعود بن جابر الجوزاء من السعودية ،
+          سعود سالم الطنان من الكويت ، صالح حسين الهمامي من السعودية ، مسعود بن شافول
+          السعودية ، ناصر هادي المنصوري من الإمارات ، نهايان مبارك المنصوري من الإمارات) هم
+          بانتظار دعم وتصويت المشاهدين على مدار الأسبوع حتى يتأهل 4 منهم
+          المحطة التالية من المسابقة بالتصويت عبر موقع برنامج المنكوس (www.almankous.ae)
+          أو تطبيقه.
+        </p>
+        <h3> Lorem ipsum dolor sit amet ،
+          consectetur adipiscing النخبة </h3>
+        <p> يشار إلى أن آلية المنافسة في برنامج المنكوس تمر بخمس مراحل رئيسية ،
+          حيث تشمل المرحلة الأولى 3 أمسيات يشارك فيها 18 متسابقًا ، ويتم تقسيم درجاتها
+          إلى 50 درجة لهيئة التحكيم و 50 درجة للمشاهدين للتصويت من خلال موقع البرنامج (
+          www.almankous.ae) أو تطبيقه ، يتنافس كل مساء 6 متسابقين ، اثنان منهم يتأهلان من قبل
+          قرار هيئة المحلفين واثنين بالتصويت. </p>
+        <p> سيكون إجمالي المتأهلين للمرحلة الثانية 12 متسابقًا يتنافسون بدورهم
+          خلال أمسيتين ، تنقسم درجاتهما إلى 50 درجة لهيئة المحلفين و 50 درجة لهيئة المحلفين
+          التصويت ، وتتأهل اثنتان في كل حلقة بقرار من لجنة التحكيم واثنتان بالتصويت. </p>
+        <p> في المرحلة الثالثة (ربع النهائي) ، يشارك 8 متسابقين في إحدى الأمسيات ويتأهل 6 متسابقين.
+          (2 بقرار من لجنة التحكيم و 4 بالتصويت) ، ويتم توزيع الدرجات على النحو التالي (50 لهيئة المحلفين
+          و 50 لتصويت المشاهدين). </p>
+        <p> في المرحلة الرابعة (نصف النهائي) ، يتنافس 6 متسابقين في المساء ، وتقوم لجنة التحكيم بتقييم
+          أداء المتسابقين من خلال 60 درجة مقسمة إلى 30 درجة خلال الحلقة و 30 درجة
+          درجات خلال الحلقة الأخيرة دون مغادرة أي متسابق ، ويصوت المشاهدون لمفضلهم
+          ، وفي المرحلة الخامسة (النهائية) تنافس المتسابقون الستة ، وفي نهاية الحلقة ، لجنة التحكيم
+          يتم جمع الدرجات من 60 درجة ، مع تصويت المشاهدين من 40 درجة ، وبناءً على المجموع ، فإن
+          يتم ترتيب المتسابقين من السادس إلى الأول.
+        </p>
+        <p> يحصل الفائز بالمركز الأول على 500 ألف درهم ، والفائز بالمركز الثاني 300 ألف درهم
+          الثالث 200 ألف درهم والرابع 150 ألف درهم والخامس 100 ألف درهم.
+          والسادس 50 ألف درهم.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+</main>
+<script src="assets/scripts/lib/modernizr.min.js" type='text/javascript'></script>
+<script src="assets/scripts/lib/jquery-3.4.1.min.js" type='text/javascript'></script>
+<script src="assets/scripts/lib/jquery-migrate-3.0.1.min.js" type='text/javascript'></script>
+<script src="assets/scripts/min/page_plugins.js" type='text/javascript'></script>
+<script src="assets/scripts/min/page.js" type='text/javascript'></script>
+
+<script>
+  $(function () {
+
+    $('[data-select]').selectric({ disableOnMobile: false, nativeOnMobile: false });
+  })
+
+</script>    <div class="progress-wrap">
+        <div class="icon_">
+            <svg x="0px" y="0px" viewBox="0 0 21.8 28" overflow="visible" xml:space="preserve">
+                <line fill="none" stroke="#1c1c1c" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                    x1="10.9" y1="24.8" x2="10.9" y2="3.7" />
+                <polyline fill="none" stroke="#1c1c1c" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-miterlimit="10" points="2.7,11.6 
+	10.9,3.3 19.2,11.6 " />
+            </svg>
+        </div>
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+        </svg>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+{{> header}}
+{{> loader}}
+<main>
+  <section class="pageBanner">
+    <div class="bgBox abs">
+      <picture>
+        <source srcset="{{assets}}/images/aboutBanner.webp" type="image/webp">
+        <source srcset="{{assets}}/images/aboutBanner.jpg" type="image/jpeg">
+        <img src="{{assets}}/images/aboutBanner.jpg" loading="lazy" alt="" width="1900" height="688">
+      </picture>
+    </div>
+    <div class="container">
+      <div class="titleWrap">
+        <h1>
+          <span>اتصل بنا</span>
+        </h1>
+      </div>
+      <div class="bottomBox">
+        <div class="breadcrumb_wrap">
+          <ul>
+            <li>
+              <a href="{{ menuLink 'index'}}"><span>مسكن</span></a>
+            </li>
+
+            <li class="current"><span>اتصل بنا</span>
+            </li>
+          </ul>
+        </div>
+        <div class="backBox">
+          <a href="{{ menuLink 'index'}}" class="link_">
+            <span>خلف</span>
+            <div class="icon">
+              <img src="{{assets}}/images/backBtn.svg" loading="lazy" alt="" width="20" height="20" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="pageSection  ">
+    <div class="container ">
+
+      <div class="registerWrap">
+
+        <div class="box">
+          <div class="infoWrap">
+            <div class="title_">لجميع الاستفسارات ، يرجى الاتصال بنا</div>
+
+            <div class="contactInfo">
+              <div class="cItem">
+                <div class="inner_">
+                  <div class="icon">
+                    <img src="{{assets}}/images/locationIcon.svg" loading="lazy" alt="" width="20" height="20" />
+                  </div>
+                  <span>مسرح شاطئ الراحة - <br />
+                    ص.ب .: 2380 ، أبوظبي <br />
+                    الإمارات العربية المتحدة</span>
+                </div>
+              </div>
+              <div class="cItem">
+                <a href="#" class="inner_">
+                  <div class="icon">
+                    <img src="{{assets}}/images/phoneIcon.svg" loading="lazy" alt="" width="20" height="20" />
+                  </div>
+                  <span>+971-2-6576197</span>
+                </a>
+              </div>
+              <div class="cItem">
+                <a href="mailto:info@turathuna.ae" class="inner_">
+                  <div class="icon">
+                    <img src="{{assets}}/images/emailIcon.svg" loading="lazy" alt="" width="20" height="20" />
+                  </div>
+                  <span>info@turathuna.ae</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="formBox">
+          <fom class="form-v3">
+            <div class="input_box">
+              <div class="input-field full_">
+                <input id="last_name" type="text" class="">
+                <label for="last_name"> اسم</label>
+              </div>
+              <div class="input-field full_">
+                <input id="emailid" type="email" class="">
+                <label for="emailid"> البريد الإلكتروني</label>
+              </div>
+              <div class="input-field full_">
+                <input id="phone" type="text" class="">
+                <label for="phone"> هاتف</label>
+              </div>
+              <div class="input-field full_">
+                <label for="phone" class="normal_ "> دولة</label>
+                <select data-select>
+                  <option>option 1</option>
+                  <option>option 2</option>
+                  <option>option 3</option>
+                </select>
+              </div>
+
+              <div class="input-field full_">
+                <button type="submit" class="more color lg_">
+                  <span>يُقدِّم</span>
+                </button>
+              </div>
+            </div>
+          </fom>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+</main>
+{{> script-page}}
+{{> footer}}
