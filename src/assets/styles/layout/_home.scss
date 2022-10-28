@@ -773,16 +773,71 @@
 // }
 
 // Common Section
-h2 {
-  font-weight: 900;
-  color: $brand-text-2;
-  font-size: 3vw;
-  padding-inline-end: 1rem;
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 .section {
   padding: 10vh 0;
   min-height: 100vh;
+}
+
+.container {
+  display: flex;
+}
+
+.titleBox {
+  h2 {
+    font-weight: 900;
+    color: $brand-text-2;
+    font-size: 2.3vw;
+    padding-inline-end: 1rem;
+  }
+
+  .bColorWhite {
+    color: $color-white;
+  }
+}
+
+.textBox {
+  margin-top: 0.5rem;
+  p {
+    font-weight: normal;
+    font-size: 1vw;
+  }
+}
+
+.textBoxMed {
+  margin-top: 0.5rem;
+  p {
+    font-weight: bold;
+    font-size: 1.2vw;
+  }
+}
+
+.listBox {
+  list-style: none;
+  padding-left: 0;
+  .listItem {
+    font-size: 1.5vw;
+  }
+  .listLink {
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: $brand-text-2;
+    opacity: 0.3;
+    transition: all 0.2s ease;
+    &.active,
+    &:hover {
+      color: $brand-color;
+      opacity: 1;
+    }
+  }
 }
 
 .sectionBlue {
@@ -793,7 +848,6 @@ h2 {
     li {
       color: $color-black !important;
     }
-
     li.highlighted,
     li.selected,
     li:hover {
@@ -803,34 +857,23 @@ h2 {
   }
 }
 
-.bColorWhite {
-  color: $color-white;
+.buttonWrap {
+  display: flex;
+  &.text-center {
+    justify-content: center;
+  }
+  margin-top: 2rem;
 }
 
 .button_ {
-  a {
-    background-color: $brand-color;
-    border-radius: 2rem;
+  background-color: $brand-color;
+  border-radius: 2rem;
+  color: $color-white;
+  padding: 0.6rem 1.4rem;
+  font-size: 1vw;
+  &:hover {
     color: $color-white;
-    padding: 0.6rem 1.4rem;
-    font-size: 1vw;
   }
-}
-
-.button_two {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.hide {
-  display: none;
-}
-
-.container {
-  display: flex;
-  height: 100%;
-  font-weight: 900;
 }
 
 .leftWrap_ {
@@ -838,14 +881,14 @@ h2 {
 }
 
 .rightWrap_ {
-  width: 72%;
-  margin: auto;
+  width: 75%;
+  padding-inline-start: 1vw;
 }
 
 .itemGrid {
   display: grid;
   grid-template-columns: repeat(4, 3fr);
-  grid-gap: 3rem 2rem;
+  grid-gap: 2rem 1.3rem;
 }
 
 .filterWrap {
@@ -867,60 +910,41 @@ h2 {
       transition: all 0.3s ease;
       padding-inline-end: 0.5rem;
       width: 100%;
-      // &::after {
-      //   content: "";
-      //   width: 0.7rem;
-      //   height: 0.7rem;
-      //   border-right: 2px solid $color-white;
-      //   border-bottom: 2px solid $color-white;
-      //   transform: rotate(45deg);
-      //   margin-left: 2rem;
-      //   margin-bottom: 0.3rem;
-      // }
+    }
+    .button {
+      width: auto;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:after {
+        content: "";
+        background-image: url("../images/caretBlack.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: relative;
+        border: none;
+        width: 0.9rem;
+        height: 0.9rem;
+        margin: 0;
+        margin-top: 0.2rem;
+        margin-inline-end: 0.6rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
     }
   }
-  .button {
-    display: none;
-  }
-}
-
-.caretBox {
-  width: 1rem;
-  height: 1rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-inline-end: 0.8rem;
-  margin-top: 0.58rem;
-  pointer-events: none;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-}
-
-// common participants styles
-.pitemWrapper {
-  p {
-    font-weight: bold;
-    font-size: 1vw;
-  }
-}
-
-.pitem {
-  position: relative;
-  padding-top: 100%;
-  overflow: hidden;
 }
 
 .ImageBox {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
-  pointer-events: none;
+  height: 0;
+  overflow: hidden;
   &:after {
     content: "";
     position: absolute;
@@ -930,50 +954,147 @@ h2 {
     height: 100%;
     background-color: $color-black;
     opacity: 0.1;
+    transition: all 0.4s ease;
   }
-}
-
-.pRank {
-  background-color: rgba($brand-text-2, 0.3);
-  color: $color-white;
-  padding: 0.3rem 1.4rem;
-  margin-right: -1.8rem;
-  border-radius: 2rem;
-  display: flex;
-
-  span {
-    margin-right: 0.5rem;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-}
-
-.pRankBox {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  justify-content: flex-end;
-  padding-inline-end: 1rem;
-
   img {
-    border: 4px solid rgba($color-white, 0.35);
+    transition: all 0.4s ease;
+  }
+
+  &:hover {
+    &:after {
+      background-color: transparent;
+    }
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// common participants and episodes/ media styles
+.pItemWrapper {
+  .pitem {
+    position: relative;
+    // overflow: hidden;
+  }
+
+  .ImageBox {
+    padding-top: 123%;
+  }
+
+  .pRankBox {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .pRank {
+    background-color: rgba($brand-text-2, 0.3);
+    color: $color-white;
+    padding: 0.4rem 1.4rem;
+    margin-right: -1.6rem;
+    border-radius: 2rem;
+    display: flex;
+    span {
+      margin-right: 0.5rem;
+      font-weight: bold;
+      font-size: 0.7rem;
+    }
+  }
+
+  .flatBox {
+    width: 2.3rem;
+    height: 2.3rem;
+    position: relative;
+    // padding-top: 20%;
     border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba($color-white, 0.5);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .pName {
+    color: $color-black;
+    span {
+      font-weight: bold;
+      font-size: 1vw;
+    }
   }
 }
 
-.flatBox {
-  width: 2.5rem;
-  height: 2.5rem;
-  position: relative;
-  // padding-top: 20%;
-  border-radius: 50%;
-  overflow: hidden;
+.eItemWrapper {
+  .textBoxMed {
+    color: $color-white;
+  }
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .ImageBox {
+    padding-top: 111%;
+  }
+
+  .playBtnWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .playBtn {
+      background-color: rgba($color-white, 0.2);
+      height: 5rem;
+      width: 5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .playIcon {
+        height: 2rem;
+        width: 2rem;
+        margin-left: 0.5rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .timeStapWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    .timeStamp {
+      background-color: rgba($color-white, 0.2);
+      position: relative;
+      padding: 0.2rem 1.2rem;
+      border-radius: 2rem;
+    }
+    span {
+      display: block;
+      color: $color-white;
+      font-weight: 500;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.mRightWrapper {
+  .mTopWrapper {
+    .ImageBox {
+      padding-top: 49%;
+    }
+  }
+
+  .mBottomItemWrapper {
+    .ImageBox {
+      padding-top: 86%;
+    }
   }
 }
 
@@ -1006,6 +1127,7 @@ h2 {
   }
 
   .container {
+    height: 100%;
     align-items: flex-end;
   }
 }
@@ -1027,6 +1149,12 @@ h2 {
     font-weight: normal;
     font-size: 1vw;
     margin-bottom: 6rem;
+  }
+}
+
+.leftWrap {
+  .buttonWrap {
+    margin-top: 0;
   }
 }
 
@@ -1055,22 +1183,6 @@ h2 {
 
 // Participant Section
 .participants {
-  .leftWrap_ {
-    a {
-      color: $brand-text-2;
-      display: block;
-      margin: 1rem 0;
-      opacity: 0.3;
-      transition: all 0.2s ease;
-
-      &.active,
-      &:hover {
-        color: $brand-color;
-        opacity: 1;
-      }
-    }
-  }
-
   .infowrap {
     display: flex;
     flex-direction: column;
@@ -1095,7 +1207,7 @@ h2 {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 20rem;
+    width: 25vw;
     margin-bottom: 1rem;
     pointer-events: none;
     img {
@@ -1111,86 +1223,23 @@ h2 {
         .label {
           color: $color-white;
         }
+        .button {
+          &:after {
+            background-image: url("../images/caret.svg");
+          }
+        }
       }
-      // .selectric-scroll {
-      //   background-color: $color-white;
-      // }
-
-      // .selectric-items li {
-      //   color: $brand-color;
-      // }
-
-      // .selectric-items .disabled {
-      //   color: $brand-color;
-      // }
     }
   }
 
   .rightWrap_ {
-    .eItemLink {
-      p {
-        color: $color-white;
-        font-weight: bold;
-      }
-    }
-    .eitem {
-      position: relative;
-      padding-top: 100%;
-      overflow: hidden;
-      display: flex;
-    }
+  }
+}
 
-    .playBtnWrap {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      .inner_ {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
+// Media
 
-    .playBtn {
-      background-color: rgba($color-white, 0.2);
-      height: 5rem;
-      width: 5rem;
-      border-radius: 50%;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .playIcon {
-        height: 2rem;
-        width: 2rem;
-        margin-left: 0.5rem;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-        }
-      }
-    }
-
-    .timeStapWrap {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin-inline-end: 0.8rem;
-      margin-top: 0.6rem;
-      .inner_ {
-        position: relative;
-        background-color: rgba($color-white, 0.2);
-        padding: 0.04rem 1.2rem 0.3rem;
-        border-radius: 2rem;
-      }
-      span {
-        color: $color-white;
-        font-weight: 500;
-        font-size: 0.7rem;
-      }
-    }
+.media {
+  .mBottom {
+    margin-top: 1rem;
   }
 }
